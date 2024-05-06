@@ -12,7 +12,7 @@ const ikeRoutes = require('./api/routes/ike')
 const testRoutes = require('./api/routes/test')
 const mongoose = require('mongoose');
 
-mongoose.connect("mongodb+srv://user:pass@cluster0-rhzye.mongodb.net/test?retryWrites=true&w=majority",{
+mongoose.connect(${{ secrets.MONGODB_CLIENT_URL }},{
     useNewUrlParser: true,
     useUnifiedTopology: true
 });
